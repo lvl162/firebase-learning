@@ -15,7 +15,7 @@ export default function NavBar() {
           </Link>
         </li>
 
-        {username && (
+        {username && user && (
           // da co username
           <>
             <li className='push-left'>
@@ -34,8 +34,8 @@ export default function NavBar() {
               `}</style>
               <Link href={`/${username}`}>
                 <Image
-                  className='avatar'
                   src={user?.photoURL}
+                  className='avatar'
                   width={50}
                   height={50}
                 ></Image>

@@ -70,7 +70,6 @@ const SignOutButton = () => {
     <button
       className='btn-blue'
       onClick={async () => {
-        console.log('click');
         await auth.signOut();
       }}
     >

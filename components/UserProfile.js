@@ -2,12 +2,15 @@ import Image from 'next/image';
 const UserProfile = ({ user }) => {
   return (
     <div className='box-center'>
-      <Image
-        src={user.photoURL}
-        className='card-avt'
-        width={200}
-        height={200}
-      />
+      <div className='card-avt'>
+        <Image
+          src={user.photoURL}
+          className='card-avt'
+          width={200}
+          height={200}
+        />
+      </div>
+
       <style jsx global>
         {`
           .card-avt {
