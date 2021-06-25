@@ -1,7 +1,8 @@
+import Image from 'next/image'
 const UserProfile = ({ user }) => {
   return (
     <div className='box-center'>
-      <img src={user.photoURL} className='card-img-center' />
+      <Image src={user.photoURL} className='card-img-center' />
       <p>
         <i>@{user.username}</i>
       </p>

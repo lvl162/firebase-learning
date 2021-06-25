@@ -1,6 +1,7 @@
 import { auth, firestore, googleAuthProvider } from '../lib/firebase';
 import { useCallback, useContext, useEffect, useState } from 'react';
 import { UserContext } from '../lib/context';
+import Image from 'next/image'
 const debounce = require('lodash.debounce');
 import firebase from 'firebase/app';
 
@@ -51,7 +52,7 @@ const SignInButton = () => {
   };
   return (
     <button className='btn-google' onClick={signInWithGoogle}>
-      <img src='/google.png'></img>Sign in with Google
+      <Image src='/google.png'></Image>Sign in with Google
     </button>
   );
 };
