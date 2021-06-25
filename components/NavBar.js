@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 import { useContext } from 'react';
 import { UserContext } from '../lib/context';
 
@@ -24,8 +24,21 @@ export default function NavBar() {
               </Link>
             </li>
             <li>
+              <style jsx global>{`
+                .avatar {
+                  border-radius: 50%;
+                  width: 50px;
+                  height: 50px;
+                  cursor: pointer;
+                }
+              `}</style>
               <Link href={`/${username}`}>
-                <Image src={user?.photoURL}></Image>
+                <Image
+                  className='avatar'
+                  src={user?.photoURL}
+                  width={50}
+                  height={50}
+                ></Image>
               </Link>
             </li>
           </>
